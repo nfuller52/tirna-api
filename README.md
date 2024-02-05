@@ -21,7 +21,7 @@ pipenv shell
 2. Install dependencies
 
 ```sh
-pipenv install
+pipenv install --dev
 ```
 
 3. Create the development db

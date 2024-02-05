@@ -15,8 +15,12 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
-# from django.urls import path
+from django.urls import re_path
+
+from .views import Json404View
+
+handler404 = Json404View.as_view()
 
 urlpatterns = [
-    # path("admin/", admin.site.urls),
+    re_path(r"^.*$", Json404View.as_view(), name="json_404"),
 ]
